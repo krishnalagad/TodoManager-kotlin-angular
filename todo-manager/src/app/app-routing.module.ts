@@ -6,11 +6,24 @@ import { ViewTodosComponent } from './pages/view-todos/view-todos.component';
 import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
-  { path: 'add-todo', component: AddTodoComponent },
-  { path: 'view-todos', component: ViewTodosComponent },
-  { path: 'update-todo', component: UpdateTodoComponent },
-  { path: '**', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent, title: 'Home - TODO MANAGER' },
+  {
+    path: 'add-todo',
+    component: AddTodoComponent,
+    title: 'Add Task - TODO MANAGER',
+  },
+  {
+    path: 'view-todos',
+    component: ViewTodosComponent,
+    title: 'View All Todos - TODO MANAGER',
+  },
+  {
+    path: 'update-todo',
+    component: UpdateTodoComponent,
+    title: 'Update Todo - TODO MANAGER',
+  },
+  { path: '**', component: HomeComponent, title: '404' },
 ];
 
 @NgModule({

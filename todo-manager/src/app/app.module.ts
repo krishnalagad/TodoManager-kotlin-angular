@@ -10,6 +10,7 @@ import { ViewTodosComponent } from './pages/view-todos/view-todos.component';
 import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TodoViewComponent } from './components/todo-view/todo-view.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ViewTodosComponent,
     UpdateTodoComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    TodoViewComponent
   ],
   imports: [
     BrowserModule,
