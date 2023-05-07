@@ -45,5 +45,5 @@ class TodoServiceImpl(
 
     override fun getTodo(todoId: String): Todo =
         this.todoRepository.findById(todoId).orElseThrow { RuntimeException("No record found.") };
-    
+
 }
