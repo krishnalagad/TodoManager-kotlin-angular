@@ -11,6 +11,8 @@ import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TodoViewComponent } from './components/todo-view/todo-view.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import { TodoViewComponent } from './components/todo-view/todo-view.component';
     UpdateTodoComponent,
     NavbarComponent,
     FooterComponent,
-    TodoViewComponent
+    TodoViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

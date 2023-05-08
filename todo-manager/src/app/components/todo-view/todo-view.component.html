@@ -1,18 +1,21 @@
 <div class="card mt-3">
-  <div class="card-body">
+  <div
+    class="card-body"
+    [ngClass]="{
+      'bg-success': todo.completed,
+      'text-white': todo.completed,
+      'strikethrough': todo.completed,
+      'bg-warning': !todo.completed
+    }"
+  >
     <div class="container">
       <div class="row">
         <div class="col-md-10">
           <div class="row mb-0">
-            <h6 style="font-weight: bold">Title of Todo</h6>
+            <h6 style="font-weight: bold">{{ todo.title }}</h6>
           </div>
           <div class="row mt-0">
-            <span style="font-size: 13px"
-              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-              doloribus perspiciatis earum a at voluptates nobis fugiat,
-              voluptatibus labore! Eius, itaque excepturi! Eaque reiciendis
-              minima sit fugiat quia? Deleniti, explicabo.</span
-            >
+            <span style="font-size: 13px"> {{ todo.content }} </span>
           </div>
         </div>
 
