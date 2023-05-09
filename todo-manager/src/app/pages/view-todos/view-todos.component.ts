@@ -25,4 +25,8 @@ export class ViewTodosComponent implements OnInit {
       },
     });
   }
+
+  deleteEventFromChild(todoId: string) {
+    this.todos = this.todos.filter(todo=>todo.id != todoId)
+  }
 }

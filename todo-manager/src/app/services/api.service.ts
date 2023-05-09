@@ -17,4 +17,8 @@ export class ApiService {
   getTodos() {
     return this._httpService.get<Todo[]>(`${this.baseUrl}`);
   }
+
+  deleteTodo(todoId: string) {
+    return this._httpService.delete(`${this.baseUrl}/${todoId}`);
+  }
 }

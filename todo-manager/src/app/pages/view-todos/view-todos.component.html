@@ -4,12 +4,15 @@
       <div class="card border-0 shadow-sm my-4">
         <div class="card-body">
           <span class="text-center"><h3>All Todos</h3></span>
-
+          <div class="alert alert-danger" *ngIf="todos.length == 0">
+            <h6>No Todo is present in list.</h6>
+            <button class="btn btn-success btn-sm" [routerLink]="'/add-todo'">Add Todo</button>
+          </div>
           <app-todo-view
             *ngFor="let todo of todos"
             [todo]="todo"
+            (deleteEvent)="deleteEventFromChild($event)"
           ></app-todo-view>
-
         </div>
       </div>
     </div>
