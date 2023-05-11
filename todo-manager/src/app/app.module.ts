@@ -13,6 +13,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TodoViewComponent } from './components/todo-view/todo-view.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,15 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule,
     FormsModule,
     HttpClientModule,
+    NgxUiLoaderModule.forRoot({
+      text: "Please wait.."
+    }),
+    NgxUiLoaderRouterModule.forRoot({
+      showForeground: false
+    }),
+    NgxUiLoaderHttpModule.forRoot({
+      showForeground: false
+    })
   ],
   providers: [],
   bootstrap: [AppComponent],

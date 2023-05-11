@@ -1,1 +1,56 @@
-<p>update-todo works!</p>
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card my-4 border-0 shadow-sm">
+        <div class="card-body">
+          <span class="text-center"><h3>Update Todo</h3></span>
+
+          <form action="" (ngSubmit)="updateTodo($event)">
+            <div class="mt-4">
+              <label for="title">Todo Title</label>
+              <input
+                id="title"
+                type="text"
+                class="form-control"
+                placeholder="Enter here"
+                name="title"
+                [(ngModel)]="todo.title"
+              />
+            </div>
+
+            <div class="mt-4">
+              <label for="content">Todo Content</label>
+              <textarea
+                id="content"
+                rows="5"
+                class="form-control"
+                name="content"
+                [(ngModel)]="todo.content"
+              ></textarea>
+            </div>
+
+            <div class="form-check form-check-inline mt-4">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                value=""
+                id="markcheck"
+                name="completed"
+                [(ngModel)]="todo.completed"
+              />
+              <label for="markcheck" class="form-check-label"
+                >Mark as done</label
+              >
+            </div>
+
+            <div class="container text-center">
+              <button class="btn btn-success btn-sm" type="submit">Update</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- {{ todo | json }} -->

@@ -19,7 +19,7 @@ const routes: Routes = [
     title: 'View All Todos - TODO MANAGER',
   },
   {
-    path: 'update-todo',
+    path: 'update-todo/:todoId',
     component: UpdateTodoComponent,
     title: 'Update Todo - TODO MANAGER',
   },

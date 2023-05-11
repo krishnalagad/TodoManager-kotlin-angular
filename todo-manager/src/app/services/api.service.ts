@@ -21,4 +21,12 @@ export class ApiService {
   deleteTodo(todoId: string) {
     return this._httpService.delete(`${this.baseUrl}/${todoId}`);
   }
+
+  getTodo(todoId: string) {
+    return this._httpService.get<Todo>(`${this.baseUrl}/${todoId}`);
+  }
+
+  updateTodo(todoId: string, todo: Todo) {
+    return this._httpService.put<Todo>(`${this.baseUrl}/${todoId}`, todo);
+  }
 }
