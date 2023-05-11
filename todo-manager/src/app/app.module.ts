@@ -14,6 +14,7 @@ import { TodoViewComponent } from './components/todo-view/todo-view.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } fro
     NavbarComponent,
     FooterComponent,
     TodoViewComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
