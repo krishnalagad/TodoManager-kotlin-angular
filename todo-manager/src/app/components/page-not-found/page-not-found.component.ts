@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 export class PageNotFoundComponent {
   constructor(private _router: Router) {}
   getLocation() {
-    // alert("not found")
 
     navigator.geolocation.getCurrentPosition((position) => {
       const latitute = position.coords.latitude;
