@@ -4,6 +4,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { AddTodoComponent } from './pages/add-todo/add-todo.component';
 import { ViewTodosComponent } from './pages/view-todos/view-todos.component';
 import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -23,7 +24,7 @@ const routes: Routes = [
     component: UpdateTodoComponent,
     title: 'Update Todo - TODO MANAGER',
   },
-  { path: '**', component: HomeComponent, title: '404' },
+  { path: '**', component: PageNotFoundComponent, title: 'Page Not Found' },
 ];
 
 @NgModule({
