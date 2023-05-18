@@ -17,13 +17,13 @@ export class AddImageJsonFormComponent implements OnInit {
   onChangeFileField(event: any) {
     this.user.imageName = event.target.files[0].name;
     this.file = event.target.files[0];
-    console.log(this.file);
+    // console.log(this.file);
   }
 
   doRegister() {
     this._api.postUserData(this.user, this.file).subscribe({
       next: (data) => {
-        console.log(data);
+        // console.log(data);
         alert('Done registration !!');
         this.user = new User('', '', '', '');
       },
