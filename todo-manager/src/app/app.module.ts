@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AddImageJsonFormComponent } from './pages/add-image-json-form/add-image-json-form.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     FooterComponent,
     TodoViewComponent,
     PageNotFoundComponent,
+    AddImageJsonFormComponent,
   ],
   imports: [
     BrowserModule,
