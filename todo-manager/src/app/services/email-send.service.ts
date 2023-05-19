@@ -10,7 +10,7 @@ export class EmailSendService {
 
   constructor(private _http: HttpClient) {}
 
-  sendEmailWithAttachment(data: Email, file: Blob) {
+  sendEmailWithAttachment(data: Email, file: File) {
     let emailData = new FormData();
     emailData.append('emailData', JSON.stringify(data));
     emailData.append('file', file);

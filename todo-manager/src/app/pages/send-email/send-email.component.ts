@@ -9,12 +9,11 @@ import { EmailSendService } from 'src/app/services/email-send.service';
 })
 export class SendEmailComponent {
   email = new Email('', '', '');
-  file!: Blob;
+  file: any = null;
 
   constructor(private _emailApi: EmailSendService) {}
 
   onFileFieldChange(event: any) {
-    
     this.file = event.target.files[0];
   }
 
@@ -23,10 +22,17 @@ export class SendEmailComponent {
       next: (data) => {
         alert('Email Sent !!');
         this.email = new Email('', '', '');
+        this.file = null;
       },
       error: (err) => {
         console.log(err);
-        alert('Email not sent !!');
+        if (err.status === 200) {
+          alert('Email sent successfully !!');
+          this.email = new Email('', '', '');
+          this.file = null;
+        } else {
+          alert('Email not sent !!');
+        }
       },
       complete: () => {
         console.log('Request completed !!');
