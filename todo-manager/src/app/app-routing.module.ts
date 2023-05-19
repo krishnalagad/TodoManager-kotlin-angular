@@ -6,6 +6,7 @@ import { ViewTodosComponent } from './pages/view-todos/view-todos.component';
 import { UpdateTodoComponent } from './pages/update-todo/update-todo.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddImageJsonFormComponent } from './pages/add-image-json-form/add-image-json-form.component';
+import { SendEmailComponent } from './pages/send-email/send-email.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -29,6 +30,11 @@ const routes: Routes = [
     path: 'add-user',
     component: AddImageJsonFormComponent,
     title: 'Add User',
+  },
+  {
+    path: 'send-email',
+    component: SendEmailComponent,
+    title: 'Send Email'
   },
   { path: '**', component: PageNotFoundComponent, title: 'Page Not Found' },
 ];

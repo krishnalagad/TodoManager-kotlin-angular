@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="card" style="margin-top: 70px; margin-bottom: 12px">
+        <div class="card-body">
+          <h2 class="text-center">Send Email</h2>
+          <form action="" class="mt-1" (ngSubmit)="sendMail()">
+            <div class="mb-3">
+              <label for="recipient" class="form-label">Recipient Email</label>
+              <input
+                type="email"
+                name="recipient"
+                class="form-control"
+                id="recipient"
+                placeholder="Enter Email ID"
+                [(ngModel)] = "email.recipient"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="subject" class="form-label" id="user_email"
+                >Subject of Mail</label
+              >
+              <input
+                type="text"
+                name="subject"
+                class="form-control"
+                id="subject"
+                placeholder="Enter Subject"
+                [(ngModel)] = "email.subject"
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="msgBody" class="form-label">Email Body</label>
+              <textarea
+                name="msgBody"
+                class="form-control"
+                id="msgBody"
+                placeholder="Enter Body"
+                rows="3"
+                [(ngModel)] = "email.msgBody"
+              ></textarea>
+            </div>
+
+            <div class="mb-3">
+              <label for="attachment" class="form-label"
+                >Select attachment</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="attachment"
+                (change)="onFileFieldChange($event)"
+              />
+            </div>
+
+            <div class="container text-center">
+              <button type="submit" class="btn btn-success btn-sm">
+                Send email
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- {{ email | json }} -->

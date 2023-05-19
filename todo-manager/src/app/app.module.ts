@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule } from 'ngx-ui-loader';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { AddImageJsonFormComponent } from './pages/add-image-json-form/add-image-json-form.component';
+import { SendEmailComponent } from './pages/send-email/send-email.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { AddImageJsonFormComponent } from './pages/add-image-json-form/add-image
     TodoViewComponent,
     PageNotFoundComponent,
     AddImageJsonFormComponent,
+    SendEmailComponent,
   ],
   imports: [
     BrowserModule,
