@@ -10,8 +10,11 @@ import { EmailSendService } from 'src/app/services/email-send.service';
 export class SendEmailComponent {
   email = new Email('', '', '');
   file: any = null;
+  // fileInput: any;
 
-  constructor(private _emailApi: EmailSendService) {}
+  constructor(private _emailApi: EmailSendService) {
+    // this.fileInput = document.getElementById("try");
+  }
 
   onFileFieldChange(event: any) {
     this.file = event.target.files[0];
@@ -38,5 +41,24 @@ export class SendEmailComponent {
         console.log('Request completed !!');
       },
     });
+  }
+
+  // fileInput.addEventListener("change", (event: any) => {
+  //   const selectedFile = event.target.files[0];
+  //   const filePath = selectedFile.path;
+
+  //   console.log(filePath);
+  // });
+
+  getFile(event: any) {
+    const file: File = event.target.files[0];
+    const reader: FileReader = new FileReader();
+
+    reader.onload = (e: any) => {
+      const filePath: string = e.target.result;
+      console.log(filePath);
+    };
+
+    reader.readAsDataURL(file);
   }
 }

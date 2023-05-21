@@ -55,6 +55,18 @@
               />
             </div>
 
+            <div class="mb-3">
+              <label for="try" class="form-label"
+                >Select attachment try</label
+              >
+              <input
+                type="file"
+                class="form-control"
+                id="try"
+                (change)="getFile($event)"
+              />
+            </div>
+
             <div class="container text-center">
               <button (click)="sendMail()" class="btn btn-success btn-sm">
                 Send email
